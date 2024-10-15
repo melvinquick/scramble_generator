@@ -1,4 +1,4 @@
-<p align="center"> <img src="images/scramble-generator-cube-with-text.png" width=400" height="400" /> </p>
+<p align="center"> <img src="scramble_generator/images/scramble-generator-cube-with-text.png" width=400" height="400" /> </p>
 
 ## Donations
 
@@ -12,11 +12,11 @@ The general purpose of this app is to give people an easy way to generate scramb
 
 ## App Showcase
 
-![app-showcase-scrambles-and-timer.gif](gifs/app-showcase-scrambles-and-timer.gif)
-![app-showcase-themes.gif](gifs/app-showcase-themes.gif)
+![app-showcase-scrambles-and-timer.gif](scramble_generator/gifs/app-showcase-scrambles-and-timer.gif)
+![app-showcase-themes.gif](scramble_generator/gifs/app-showcase-themes.gif)
 
 ## Useful Information
 
-- [Project Goals](https://codeberg.org/melvinquick/scramble-generator/projects/11195)
-- [Latest Version Direct Download Link (ZIP)](https://codeberg.org/melvinquick/scramble-generator/releases/download/latest/scramble-generator.zip)
-- [Latest Version Direct Download Link (SETUP)](https://codeberg.org/melvinquick/scramble-generator/releases/download/latest/setup.exe)
+- [Project Goals](https://codeberg.org/melvinquick/scramble_generator/projects/11195)
+- [Latest Version Direct Download Link (ZIP)](https://codeberg.org/melvinquick/scramble_generator/releases/download/latest/scramble-generator.zip)
+- [Latest Version Direct Download Link (SETUP)](https://codeberg.org/melvinquick/scramble_generator/releases/download/latest/setup.exe)
