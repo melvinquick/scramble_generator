@@ -3,7 +3,6 @@
 ## Donations
 
 - [Buy Me A Coffee](https://www.buymeacoffee.com/KingKairos)
-- [Crypto Addresses](https://hastebin.com/share/azomeyetum.makefile)
 - [GitHub Sponsors](https://github.com/sponsors/melvinquick)
 
 ## Purpose
