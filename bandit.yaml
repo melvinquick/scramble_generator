@@ -4,7 +4,6 @@ exclude_dirs:
     "ignore",
     "scramble_generator/gifs",
     "scramble_generator/images",
-    ".gitattributes",
     ".gitignore",
     "poetry.lock",
     "PULL_REQUEST_TEMPLATE.md",
