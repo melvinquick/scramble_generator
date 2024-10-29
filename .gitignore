@@ -1,3 +1,4 @@
 scramble_generator/__pycache__/
 ignore/
-tests
+tests/
+bandit.yaml
