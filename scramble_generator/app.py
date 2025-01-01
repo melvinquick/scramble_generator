@@ -118,19 +118,30 @@ class MainWindow(QMainWindow):
 
     def toggle_theme(self):
         self.theme = self.theme_picker.currentText()
+
         self.apply_theme(self)
-        for widget in self.findChildren(QWidget):  # * Apply theme to all child widgets
-            self.apply_theme(widget)
+
 
     def apply_theme(self, widget):
-        self.theme_stylesheet = f"""
+        self.main_stylesheet = f"""
             background-color: {themes[self.theme]['background-color']};
             color: {themes[self.theme]['color']};
             border: {themes[self.theme]['border']};
             border-radius: {themes['general']['border-radius']};
             padding: {themes['general']['padding']};
             """
-        widget.setStyleSheet(self.theme_stylesheet)
+        self.widget_stylesheet = f"""
+            background-color: {themes[self.theme]['widget-background-color']};
+            """
+        self.setStyleSheet(self.main_stylesheet)
+        self.scramble_button.setStyleSheet(self.widget_stylesheet)
+        self.puzzle_type.setStyleSheet(self.widget_stylesheet)
+        self.num_moves.setStyleSheet(self.widget_stylesheet)
+        self.theme_picker.setStyleSheet(self.widget_stylesheet)
+        self.scramble.setStyleSheet(self.widget_stylesheet)
+        self.save_config_button.setStyleSheet(self.widget_stylesheet)
+        self.timer_button.setStyleSheet(self.widget_stylesheet)
+        self.timer_output.setStyleSheet(self.widget_stylesheet)
 
     def get_moves(self):
         scramble = ScrambleGenerator(self.puzzle_type.currentText().lower())
