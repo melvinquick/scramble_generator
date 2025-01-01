@@ -1,18 +1,3 @@
-Dracula:
-  background-color: "#282a36"
-  color: "#f8f8f2"
-  border: 1px solid '#44475a'
-
-Everforest-Light:
-  background-color: "#f3ead3"
-  color: "#5c6a72"
-  border: 1px solid '#b9c0ab'
-
-Everforest-Dark:
-  background-color: "#333c43"
-  color: "#d3c6aa"
-  border: 1px solid '#5d6b66'
-
 Gruvbox-Light:
   background-color: "#fbf1c7"
   color: "#282828"
@@ -23,20 +8,16 @@ Gruvbox-Dark:
   color: "#fbf1c7"
   border: 1px solid '#928374'
 
-Nord-Aurora:
-  background-color: "#bf616a"
-  color: "#ebcb8b"
-  border: 1px solid '#d08770'
-
-Nord-Frost:
+Nord-Light:
   background-color: "#5e81ac"
   color: "#8fbcbb"
   border: 1px solid '#81a1c1'
 
-Nord-PolarNight:
+Nord-Dark:
   background-color: "#2e3440"
-  color: "#4c566a"
-  border: 1px solid '#3b4252'
+  color: "#eceff4"
+  border: 1px solid '#434c5e'
+  widget-background-color: "#4c566a"
 
 PaperColor-Light:
   background-color: "#eeeeee"
