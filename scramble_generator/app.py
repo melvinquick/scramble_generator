@@ -29,7 +29,6 @@ themes = themes_file.load_yaml_file()
 user_defaults = user_defaults_file.load_yaml_file()
 
 
-
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -121,7 +120,6 @@ class MainWindow(QMainWindow):
 
         self.apply_theme(self)
 
-
     def apply_theme(self, widget):
         self.main_stylesheet = f"""
             background-color: {themes[self.theme]['background-color']};
@@ -186,7 +184,7 @@ class MainWindow(QMainWindow):
 
 def main():
     app = QApplication(sys.argv)
-    app.setStyle("Windows")
+    app.setStyle("Breeze")
     window = MainWindow()
     window.show()
     app.exec()
