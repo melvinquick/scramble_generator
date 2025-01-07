@@ -6,7 +6,7 @@
 
 ### New Feature Submissions:
 
-1. [ ] Have you asked about and got positive feedback about this request in the [Official Scramble Generator Discord](https://discord.gg/urfh2EMQNG)?
+1. [ ] Have you asked about and got positive feedback about this request?
 2. [ ] Have you checked your code locally before submitting this PR to make sure it works without issue?
 
 ### Changes to Core Features:
