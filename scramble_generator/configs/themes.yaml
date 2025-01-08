@@ -1,33 +1,14 @@
-Gruvbox-Light:
-  background-color: "#fbf1c7"
-  color: "#282828"
-  border: 1px solid '#928374'
+Light:
+  background-color: "#d8dee9"
+  color: "#2e3440"
+  border: 1px solid '#e5e9f0'
+  widget-background-color: "#eceff4"
 
-Gruvbox-Dark:
-  background-color: "#282828"
-  color: "#fbf1c7"
-  border: 1px solid '#928374'
-
-Nord-Light:
-  background-color: "#5e81ac"
-  color: "#8fbcbb"
-  border: 1px solid '#81a1c1'
-
-Nord-Dark:
+Dark:
   background-color: "#2e3440"
   color: "#eceff4"
   border: 1px solid '#434c5e'
   widget-background-color: "#4c566a"
-
-PaperColor-Light:
-  background-color: "#eeeeee"
-  color: "#444444"
-  border: 1px solid '#bcbcbc'
-
-PaperColor-Dark:
-  background-color: "#1c1c1c"
-  color: "#d0d0d0"
-  border: 1px solid '#585858'
 
 general:
   border-radius: "4px"
