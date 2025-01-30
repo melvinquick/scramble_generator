@@ -1,4 +1,3 @@
-scramble_generator/__pycache__/
-ignore/
-tests/
+venv/
 bandit.yaml
+requirements.in
