@@ -1,14 +1,12 @@
 exclude_dirs:
   [
-    "tests",
-    "ignore",
-    "scramble_generator/gifs",
-    "scramble_generator/images",
+    "scramble_generator/resources/",
+    "scramble_generator_venv/",
     ".gitignore",
-    "poetry.lock",
-    "PULL_REQUEST_TEMPLATE.md",
-    "pyproject.toml",
+    LICENSE.txt,
     "README.md",
+    "requirements.in",
+    "requirements.txt",
   ]
 tests: []
 skips: []
