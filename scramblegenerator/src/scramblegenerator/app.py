@@ -12,10 +12,9 @@ from PySide6.QtWidgets import (
     QWidget,
     QPushButton,
     QLabel,
-    QVBoxLayout,
     QComboBox,
-    QHBoxLayout,
     QSpinBox,
+    QGridLayout,
 )
 
 from scramblegenerator.scramble_generator import ScrambleGenerator as SG
@@ -26,9 +25,6 @@ config = config_file.load_yaml_file()
 
 themes_file = YamlFileHandler("resources/configs/themes.yaml")
 themes = themes_file.load_yaml_file()
-
-user_defaults_file = YamlFileHandler("resources/configs/user_defaults.yaml")
-user_defaults = user_defaults_file.load_yaml_file()
 
 
 class ScrambleGenerator(QMainWindow):
@@ -56,23 +52,20 @@ class ScrambleGenerator(QMainWindow):
 
         self.puzzle_type = QComboBox()
         self.puzzle_type.addItems(self.puzzle_type_list)
-        self.puzzle_type.setCurrentText(user_defaults["defaults"]["puzzle_type"])
+        self.puzzle_type.setCurrentText(config["defaults"]["puzzle_type"])
 
         self.num_moves = QSpinBox()
         self.num_moves.setRange(
             config["num_moves_range"]["min"], config["num_moves_range"]["max"]
         )
-        self.num_moves.setMaximumWidth(config["num_moves_widget_size"]["width"])
-        self.num_moves.setValue(user_defaults["defaults"]["num_moves"])
-        self.num_moves.lineEdit().setReadOnly(True)
+        self.num_moves.setValue(config["defaults"]["num_moves"])
 
-        self.theme_toggle = QPushButton(user_defaults["defaults"]["theme"])
+        self.theme_toggle = QPushButton(config["defaults"]["theme"])
 
         self.scramble = QLabel(
             " ", alignment=Qt.AlignmentFlag.AlignCenter, wordWrap=True
         )
-
-        self.save_config_button = QPushButton("Save Config")
+        self.scramble.setFixedWidth(config["scramble_widget_width"])
 
         self.timer_button = QPushButton("Start Timer")
 
@@ -87,29 +80,28 @@ class ScrambleGenerator(QMainWindow):
         self.scramble_button.pressed.connect(self.get_moves)
         self.puzzle_type.currentTextChanged.connect(self.set_default_num_moves)
         self.theme_toggle.pressed.connect(self.toggle_theme)
-        self.save_config_button.pressed.connect(self.save_defaults)
         self.timer_button.pressed.connect(self.toggle_timer)
         self.timer.timeout.connect(self.update_time)
 
         # * Create layouts
-        self.page = QVBoxLayout()
-        self.row_one = QHBoxLayout()
-        self.row_three = QHBoxLayout()
+        self.page = QGridLayout()
+        self.left_side = QGridLayout()
+        self.left_side.setVerticalSpacing(5)
+        self.right_side = QGridLayout()
 
         # * Add widgets to layouts
-        self.row_one.addWidget(self.scramble_button)
-        self.row_one.addWidget(self.puzzle_type)
-        self.row_one.addWidget(self.num_moves)
-        self.row_one.addWidget(self.theme_toggle)
+        self.left_side.addWidget(self.scramble_button, 0, 0, 1, 2)
+        self.left_side.addWidget(self.puzzle_type, 1, 0, 1, 1)
+        self.left_side.addWidget(self.num_moves, 1, 1, 1, 1)
+        self.left_side.addWidget(self.timer_button, 2, 0, 1, 2)
+        self.left_side.addWidget(self.timer_output, 3, 0, 1, 2)
+        self.left_side.addWidget(self.theme_toggle, 4, 0, 1, 2)
 
-        self.row_three.addWidget(self.save_config_button)
-        self.row_three.addWidget(self.timer_button)
-        self.row_three.addWidget(self.timer_output)
+        self.right_side.addWidget(self.scramble, 0, 0, 1, 2)
 
         # * Setup overall page layout and set default window theme
-        self.page.addLayout(self.row_one)
-        self.page.addWidget(self.scramble)
-        self.page.addLayout(self.row_three)
+        self.page.addLayout(self.left_side, 0, 0)
+        self.page.addLayout(self.right_side, 0, 1)
 
         self.gui = QWidget()
         self.gui.setLayout(self.page)
@@ -130,14 +122,14 @@ class ScrambleGenerator(QMainWindow):
 
     def apply_theme(self, theme):
         self.main_stylesheet = f"""
-            background-color: {themes[theme]['background-color']};
-            color: {themes[theme]['color']};
-            border: {themes[theme]['border']};
-            border-radius: {themes['general']['border-radius']};
-            padding: {themes['general']['padding']};
+            background-color: {themes[theme]["background-color"]};
+            color: {themes[theme]["color"]};
+            border: {themes[theme]["border"]};
+            border-radius: {themes["general"]["border-radius"]};
+            padding: {themes["general"]["padding"]};
             """
         self.widget_stylesheet = f"""
-            background-color: {themes[theme]['widget-background-color']};
+            background-color: {themes[theme]["widget-background-color"]};
             """
         self.setStyleSheet(self.main_stylesheet)
         self.scramble_button.setStyleSheet(self.widget_stylesheet)
@@ -145,7 +137,6 @@ class ScrambleGenerator(QMainWindow):
         self.num_moves.setStyleSheet(self.widget_stylesheet)
         self.theme_toggle.setStyleSheet(self.widget_stylesheet)
         self.scramble.setStyleSheet(self.widget_stylesheet)
-        self.save_config_button.setStyleSheet(self.widget_stylesheet)
         self.timer_button.setStyleSheet(self.widget_stylesheet)
         self.timer_output.setStyleSheet(self.widget_stylesheet)
 
@@ -188,17 +179,6 @@ class ScrambleGenerator(QMainWindow):
         if not self.is_running:
             self.elapsed_time = QTime(0, 0)
 
-    def save_defaults(self):
-        current_configs = {
-            "defaults": {
-                "theme": self.theme_toggle.currentText(),
-                "num_moves": self.num_moves.value(),
-                "puzzle_type": self.puzzle_type.currentText().lower(),
-            }
-        }
-
-        user_defaults_file.save_yaml_file(current_configs)
-
 
 def main():
     # Linux desktop environments use an app's .desktop file to integrate the app
@@ -218,5 +198,5 @@ def main():
     QApplication.setApplicationName(metadata["Formal-Name"])
 
     app = QApplication(sys.argv)
-    main_window = ScrambleGenerator()
+    main_window = ScrambleGenerator()  # noqa: F841
     sys.exit(app.exec())
