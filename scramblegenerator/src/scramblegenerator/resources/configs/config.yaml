@@ -35,4 +35,4 @@ window_title: "Scramble Generator"
 window_size:
   width: 660
   height: 160
-scramble_widget_width: 500
+scramble_widget_width: 480
