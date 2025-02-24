@@ -2,7 +2,7 @@
 [tool.briefcase]
 project_name = "Scramble Generator"
 bundle = "com.melvinquick"
-version = "1.17.1"
+version = "1.19.0"
 url = "https://scramblegenerator.com"
 license.file = "LICENSE"
 author = "Melvin Quick"
