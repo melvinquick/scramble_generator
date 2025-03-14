@@ -2,7 +2,6 @@
 Python app for generating scrambles for twisty puzzles.
 """
 
-import importlib.metadata
 import sys
 
 from PySide6.QtCore import Qt, QTimer, QTime
@@ -17,8 +16,8 @@ from PySide6.QtWidgets import (
     QGridLayout,
 )
 
-from scramblegenerator.scramble_generator import ScrambleGenerator as SG
-from scramblegenerator.yaml_file_handler import YamlFileHandler
+from scramble_generator.scramble_generator import ScrambleGenerator as SG
+from scramble_generator.yaml_file_handler import YamlFileHandler
 
 config_file = YamlFileHandler("resources/configs/config.yaml")
 config = config_file.load_yaml_file()
@@ -181,22 +180,10 @@ class ScrambleGenerator(QMainWindow):
 
 
 def main():
-    # Linux desktop environments use an app's .desktop file to integrate the app
-    # in to their application menus. The .desktop file of this app will include
-    # the StartupWMClass key, set to app's formal name. This helps associate the
-    # app's windows to its menu item.
-    #
-    # For association to work, any windows of the app must have WMCLASS property
-    # set to match the value set in app's desktop file. For PySide6, this is set
-    # with setApplicationName().
-
-    # Find the name of the module that was used to start the app
-    app_module = sys.modules["__main__"].__package__
-    # Retrieve the app's metadata
-    metadata = importlib.metadata.metadata(app_module)
-
-    QApplication.setApplicationName(metadata["Formal-Name"])
-
     app = QApplication(sys.argv)
     main_window = ScrambleGenerator()  # noqa: F841
     sys.exit(app.exec())
+
+
+if __name__ == "__main__":
+    main()
