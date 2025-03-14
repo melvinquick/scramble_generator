@@ -71,7 +71,7 @@ def get_python_path(venv_path):
 
 
 def get_app_path(venv_path):
-    return os.path.join(venv_path, "bin", "psswd-box")
+    return os.path.join(venv_path, "bin", "scramble-generator")
 
 
 def create_desktop_file(icon, version, python, app):
