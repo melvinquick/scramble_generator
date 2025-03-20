@@ -44,7 +44,6 @@ class ScrambleGenerator(QMainWindow):
         self.is_running = False
         self.elapsed_time = QTime(0, 0)
         self.puzzle_type_list = [puzzle for puzzle in config["puzzle_type_list"]]
-        self.theme_list = [theme for theme in list(themes)[:-1]]
 
         # * Create end user widgets and apply settings to them
         self.scramble_button = QPushButton("Generate Scramble")
