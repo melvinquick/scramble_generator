@@ -16,8 +16,8 @@ from PySide6.QtWidgets import (
     QGridLayout,
 )
 
-from scramble_generator.scramble_generator import ScrambleGenerator as SG
-from scramble_generator.yaml_file_handler import YamlFileHandler
+from .scramble_generator import ScrambleGenerator as SG
+from .yaml_file_handler import YamlFileHandler
 
 config_file = YamlFileHandler("resources/configs/config.yaml")
 config = config_file.load_yaml_file()
