@@ -30,7 +30,7 @@
 
 ### Documentation Changes
 
-## 1.20.0 (14 Mar 2025)
+## 1.20.0 (24 Feb 2025)
 
 ### Major Changes
 
@@ -39,5 +39,19 @@
 - [Update file structure to UV instead of BeeWare](https://codeberg.org/melvinquick/scramble_generator/issues/7)
 
 ### Patch Changes
+
+### Documentation Changes
+
+## 1.20.3 (20 Mar 2025)
+
+### Major Changes
+
+### Minor Changes
+
+### Patch Changes
+
+- [Remove unneeded variable](https://codeberg.org/melvinquick/scramble_generator/issues/8)
+- [Correct variables that don't need self assignment](https://codeberg.org/melvinquick/scramble_generator/issues/9)
+- [Fix custom module imports](https://codeberg.org/melvinquick/scramble_generator/issues/10)
 
 ### Documentation Changes

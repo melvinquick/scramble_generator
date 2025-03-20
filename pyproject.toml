@@ -1,6 +1,6 @@
 [project]
 name = "scramble_generator"
-version = "1.20.0"
+version = "1.20.3"
 description = "Python app for generating scrambles for twisty puzzles."
 readme = "src/scramble_generator/resources/PYPI_README.md"
 license = "MIT"
