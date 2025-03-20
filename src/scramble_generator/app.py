@@ -82,29 +82,29 @@ class ScrambleGenerator(QMainWindow):
         self.timer.timeout.connect(self.update_time)
 
         # * Create layouts
-        self.page = QGridLayout()
-        self.left_side = QGridLayout()
-        self.left_side.setVerticalSpacing(5)
-        self.right_side = QGridLayout()
+        page = QGridLayout()
+        left_side = QGridLayout()
+        left_side.setVerticalSpacing(5)
+        right_side = QGridLayout()
 
         # * Add widgets to layouts
-        self.left_side.addWidget(self.scramble_button, 0, 0, 1, 2)
-        self.left_side.addWidget(self.puzzle_type, 1, 0, 1, 1)
-        self.left_side.addWidget(self.num_moves, 1, 1, 1, 1)
-        self.left_side.addWidget(self.timer_button, 2, 0, 1, 2)
-        self.left_side.addWidget(self.timer_output, 3, 0, 1, 2)
-        self.left_side.addWidget(self.theme_toggle, 4, 0, 1, 2)
+        left_side.addWidget(self.scramble_button, 0, 0, 1, 2)
+        left_side.addWidget(self.puzzle_type, 1, 0, 1, 1)
+        left_side.addWidget(self.num_moves, 1, 1, 1, 1)
+        left_side.addWidget(self.timer_button, 2, 0, 1, 2)
+        left_side.addWidget(self.timer_output, 3, 0, 1, 2)
+        left_side.addWidget(self.theme_toggle, 4, 0, 1, 2)
 
-        self.right_side.addWidget(self.scramble, 0, 0, 1, 2)
+        right_side.addWidget(self.scramble, 0, 0, 1, 2)
 
         # * Setup overall page layout and set default window theme
-        self.page.addLayout(self.left_side, 0, 0)
-        self.page.addLayout(self.right_side, 0, 1)
+        page.addLayout(left_side, 0, 0)
+        page.addLayout(right_side, 0, 1)
 
-        self.gui = QWidget()
-        self.gui.setLayout(self.page)
+        gui = QWidget()
+        gui.setLayout(page)
 
-        self.setCentralWidget(self.gui)
+        self.setCentralWidget(gui)
 
         self.apply_theme(self.theme_toggle.text().lower())
 
