@@ -1,7 +1,7 @@
 ## Donations
 
-- [Buy Me A Coffee](https://www.buymeacoffee.com/KingKairos)
-- [GitHub Sponsors](https://github.com/sponsors/melvinquick)
+[Buy Me A Coffee](https://www.buymeacoffee.com/KingKairos)  
+[GitHub Sponsors](https://github.com/sponsors/melvinquick)
 
 ## Purpose
 
@@ -14,5 +14,5 @@ Uninstall: `curl -s https://codeberg.org/melvinquick/scramble_generator/raw/bran
 
 ## Useful Information
 
-- [Project Goals](https://codeberg.org/melvinquick/scramble_generator/projects/11195)
-- [Latest Release](https://pypi.org/project/scramble_generator/)
+[Project Goals](https://codeberg.org/melvinquick/scramble_generator/projects/11195)  
+[Latest Release](https://pypi.org/project/scramble_generator/)
