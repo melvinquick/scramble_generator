@@ -14,12 +14,6 @@ The general purpose of this app is to give people an easy way to generate scramb
 Install: `curl -s https://codeberg.org/melvinquick/scramble_generator/raw/branch/main/install.py | python3 -`  
 Uninstall: `curl -s https://codeberg.org/melvinquick/scramble_generator/raw/branch/main/uninstall.py | python3 -`
 
-![app_install_uninstall_showcase.gif](src/scramble_generator/resources/gifs/app_install_uninstall_showcase.gif)
-
-## App Showcase
-
-![app_showcase.gif](src/scramble_generator/resources/gifs/app_showcase.gif)
-
 ## Useful Information
 
 [Project Goals](https://codeberg.org/melvinquick/scramble_generator/projects/11195)  
