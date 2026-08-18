@@ -16,5 +16,5 @@ Uninstall: `curl -s https://github.com/melvinquick/scramble_generator/raw/branch
 
 ## Useful Information
 
-[Project Goals](https://github.com/melvinquick/scramble_generator/projects/11195)  
+[Project](https://github.com/users/melvinquick/projects/11)  
 [Latest Release](https://pypi.org/project/scramble_generator/)
