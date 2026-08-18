@@ -9,8 +9,8 @@ requires-python = ">=3.10"
 dependencies = ["pyside6>=6.8.2.1", "pyyaml>=6.0.2"]
 
 [project.urls]
-repository = "https://codeberg.org/melvinquick/scramble_generator"
-issues = "https://codeberg.org/melvinquick/scramble_generator/issues"
+repository = "https://github.com/melvinquick/scramble_generator"
+issues = "https://github.com/melvinquick/scramble_generator/issues"
 
 [project.gui-scripts]
 scramble-generator = "scramble_generator.app:main"
