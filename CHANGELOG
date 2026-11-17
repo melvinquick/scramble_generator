@@ -2,92 +2,56 @@
 
 ## 1.17.1 (30 Jan 2025)
 
-### Major Changes
+### New Features
 
-### Minor Changes
+- Initial release
 
-- [Issue #1](https://codeberg.org/melvinquick/scramble_generator/issues/1)
-- [Issue #2](https://codeberg.org/melvinquick/scramble_generator/issues/2)
+### Improvements
 
-### Patch Changes
+- Added save config option and user defaults
 
-- [Issue #4](https://codeberg.org/melvinquick/scramble_generator/issues/4)
+### Bug Fixes
 
-### Documentation Changes
-
-- [Issue #3](https://codeberg.org/melvinquick/scramble_generator/issues/3)
+- Fixed initial setup issues
 
 ## 1.19.0 (24 Feb 2025)
 
-### Major Changes
+### Improvements
 
-### Minor Changes
-
-- [Remove save config option and user defaults](https://codeberg.org/melvinquick/scramble_generator/issues/5)
-- [Overhaul UI to make more condensed and modern](https://codeberg.org/melvinquick/scramble_generator/issues/6)
-
-### Patch Changes
-
-### Documentation Changes
+- Removed save config option and user defaults
+- Overhauled UI to make it more condensed and modern
 
 ## 1.20.0 (24 Feb 2025)
 
-### Major Changes
+### Improvements
 
-### Minor Changes
-
-- [Update file structure to UV instead of BeeWare](https://codeberg.org/melvinquick/scramble_generator/issues/7)
-
-### Patch Changes
-
-### Documentation Changes
+- Updated file structure to use `uv` instead of BeeWare
 
 ## 1.20.3 (20 Mar 2025)
 
-### Major Changes
+### Bug Fixes
 
-### Minor Changes
+- Fixed custom module imports
 
-### Patch Changes
+### Improvements
 
-- [Remove unneeded variable](https://codeberg.org/melvinquick/scramble_generator/issues/8)
-- [Correct variables that don't need self assignment](https://codeberg.org/melvinquick/scramble_generator/issues/9)
-- [Fix custom module imports](https://codeberg.org/melvinquick/scramble_generator/issues/10)
-
-### Documentation Changes
+- Removed unneeded variables
+- Corrected variables that didn't need self-assignment
 
 ## 1.20.4 (31 Oct 2025)
 
-### Major Changes
+### Improvements
 
-### Minor Changes
-
-### Patch Changes
-
-- Reduce required Python version to 3.10
-
-### Documentation Changes
+- Reduced the required Python version
 
 ## 1.20.6 (21 Jul 2026)
 
-### Major Changes
-
-### Minor Changes
-
-### Patch Changes
+### Improvements
 
 - Version bump to update dependencies
 
-### Documentation Changes
-
 ## 1.20.21 (26 Oct 2026)
 
-### Major Changes
-
-### Minor Changes
-
-### Patch Changes
+### Improvements
 
 - Version bump to update dependencies and Python versions
-
-### Documentation Changes
