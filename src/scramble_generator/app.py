@@ -19,7 +19,7 @@ from PySide6.QtWidgets import (
 from .components.scramble_generator import ScrambleGenerator as SG
 from .components.yaml_file_handler import YamlFileHandler
 
-config_file = YamlFileHandler("resources/configs/config.yaml")
+config_file = YamlFileHandler("../resources/configs/config.yaml")
 config = config_file.load_yaml_file()
 
 themes_file = YamlFileHandler("../resources/styles/themes.yaml")
