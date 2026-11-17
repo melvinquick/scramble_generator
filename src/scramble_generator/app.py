@@ -22,7 +22,7 @@ from .components.yaml_file_handler import YamlFileHandler
 config_file = YamlFileHandler("resources/configs/config.yaml")
 config = config_file.load_yaml_file()
 
-themes_file = YamlFileHandler("resources/configs/themes.yaml")
+themes_file = YamlFileHandler("../resources/styles/themes.yaml")
 themes = themes_file.load_yaml_file()
 
 
