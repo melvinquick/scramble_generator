@@ -4,20 +4,20 @@ Python app for generating scrambles for twisty puzzles.
 
 import sys
 
-from PySide6.QtCore import Qt, QTimer, QTime
+from PySide6.QtCore import Qt, QTime, QTimer
 from PySide6.QtWidgets import (
     QApplication,
-    QMainWindow,
-    QWidget,
-    QPushButton,
-    QLabel,
     QComboBox,
-    QSpinBox,
     QGridLayout,
+    QLabel,
+    QMainWindow,
+    QPushButton,
+    QSpinBox,
+    QWidget,
 )
 
-from .scramble_generator import ScrambleGenerator as SG
-from .yaml_file_handler import YamlFileHandler
+from .components.scramble_generator import ScrambleGenerator as SG
+from .components.yaml_file_handler import YamlFileHandler
 
 config_file = YamlFileHandler("resources/configs/config.yaml")
 config = config_file.load_yaml_file()
