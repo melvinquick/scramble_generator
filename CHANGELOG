@@ -55,3 +55,30 @@
 ### Improvements
 
 - Version bump to update dependencies and Python versions
+
+## 2.0.0 (24 Nov 2026)
+
+### New Features
+
+- Added a Preferences dialog to manage default settings for puzzle type, move count, and auto-copy
+- Added persistent settings using `QSettings` stored in `~/.config/scramble_generator/settings.conf`
+- Added 12 new themes (Scramble Generator Dark/Light, Phaino Dark/Light, Equinox Dark/Light, Catppuccin Mocha/Latte, Solarized Dark/Light, Gruvbox Dark/Light) with live theme switching
+- Added an About dialog accessible from the Help menu showing app version, author, and license
+- Added a dynamic scrolling output area for long scrambles
+- Added "Copy Scramble" and "Exit" actions to the menu bar
+
+### Improvements
+
+- Completely overhauled the GUI, replacing the fixed layout with a responsive card-based design
+- Modularized the codebase, moving UI components into a flat `components/` directory
+- Moved all styling into a centralized `styles.qss` file utilizing token substitution for dynamic theming
+- Replaced hardcoded scramble generation logic with a programmatic approach that removes 150+ lines of dead code
+- Removed `config.yaml` in favor of constants and `QSettings`
+
+### Bug Fixes
+
+- Fixed a bug where the `R5` move mapped to `R4'`
+- Fixed the timer resetting to zero instead of stopping and showing the elapsed time
+- Fixed the scramble output box clipping long scrambles
+- Fixed the theme toggle logic being inverted
+- Fixed the preferences dialog text being unreadable in dark mode
