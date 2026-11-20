@@ -24,7 +24,7 @@ The general purpose of this app is to give people an easy way to generate scramb
 The installer sets up a dedicated venv and creates a desktop shortcut.
 
 ```
-curl -s https://raw.githubusercontent.com/melvinquick/scramble_generator/main/install.py | python3 -
+curl -s https://raw.githubusercontent.com/melvinquick/scramble_generator/main/install.py | python3 - scramble_generator
 ```
 
 ### Supported Operating Systems
